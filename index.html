@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SYL Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">SYL Services</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="container">
+    <!-- Left Column -->
+    <section class="services">
+      <h2>Our Products</h2>
+
+      <!-- Slideshow -->
+      <div class="slideshow">
+        <img id="slideImage" src="https://images.pexels.com/photos/212236/pexels-photo-212236.jpeg" alt="Slideshow Image">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <!-- Tabbed content -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="cosmetics">Cosmetics</button>
+        <button class="tab-btn" data-tab="perfumes">Perfumes</button>
+        <button class="tab-btn" data-tab="makeup">Makeup</button>
+      </div>
+      <div class="tab-content active" id="cosmetics">
+        <p>Our premium cosmetic line is crafted with love and science.</p>
+      </div>
+      <div class="tab-content" id="perfumes">
+        <p>Explore our oud and designer perfumes, handcrafted to perfection.</p>
+      </div>
+      <div class="tab-content" id="makeup">
+        <p>Makeup essentials to bring out your best features daily.</p>
+      </div>
+
+      <!-- Interactive Button -->
+      <button id="changeBtn">Click Me!</button>
+    </section>
+
+    <!-- Right Column -->
+    <section class="team">
+      <h2>Board of Directors</h2>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Position</th><th>Phone</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>John Oguyo</td><td>Chairperson</td><td>0207991235</td><td><a href="mailto:JOguyo@Syl.org.com">JOguyo@Syl.org.com</a></td></tr>
+          <tr><td>Sylvia Wanjira</td><td>COO</td><td>0207991335</td><td><a href="mailto:Wanjira@syl.org.com">Wanjira@syl.org.com</a></td></tr>
+          <tr><td>Faith Wanza</td><td>MD</td><td>0207991254</td><td><a href="mailto:Wanza@syl.org.com">Wanza@syl.org.com</a></td></tr>
+          <tr><td>Ivan Lewisy</td><td>Marketing Director</td><td>0207991554</td><td><a href="mailto:ivlewisy@syl.org.com">ivlewisy@syl.org.com</a></td></tr>
+          <tr><td>Odogwu Okiri</td><td>CFO</td><td>0207991248</td><td><a href="mailto:okiri@syl.org.com">okiri@syl.org.com</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Form -->
+  <section class="form-section">
+    <h2>Join Our Team</h2>
+    <form id="joinForm">
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <small id="nameFeedback"></small>
+      </fieldset>
+      <br/>
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" /><label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" /><label for="female">Female</label>
+      <br/><br/>
+      <label>Department:</label>
+      <input type="checkbox" id="sales" name="department" value="Sales" /><label for="sales">Sales</label>
+      <input type="checkbox" id="it" name="department" value="IT" /><label for="it">IT</label>
+      <input type="checkbox" id="logistics" name="department" value="Logistics" /><label for="logistics">Logistics</label>
+      <br/><br/>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+      <br/><br/>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required minlength="8" />
+      <br/><br/>
+      <label for="education">Qualification:</label>
+      <select id="education" name="education">
+        <option value="Highschool">Highschool</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Undergraduate">Undergraduate</option>
+        <option value="Postgraduate">Postgraduate</option>
+      </select>
+      <br/><br/>
+      <input type="submit" id="submitBtn" value="Submit" />
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
